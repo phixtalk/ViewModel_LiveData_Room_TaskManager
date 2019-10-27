@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.eventmanager">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".view.AddEditNoteActivity"
+            android:parentActivityName=".view.MainActivity"
+            /><!--gets the back btn to the top left corner
+            and replaces it with the X icon, when clicked navigates to the
+            MainActivity ra-->
+        <activity
+            android:name=".view.MainActivity"
+            android:launchMode="singleTop"
+            ><!--singleTop prevent relaunching this activity when X btn is clicked -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
